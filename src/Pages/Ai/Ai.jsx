@@ -13,9 +13,7 @@ export default function Ai() {
   const [numberOfPeople, setNumberOfPeople] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const genAI = new GoogleGenerativeAI(
-    "AIzaSyBeZJXzlqkU1mkPxsXOfXMxEjfPSqlX3wA"
-  );
+  const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMENI_API_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
   useEffect(() => {
