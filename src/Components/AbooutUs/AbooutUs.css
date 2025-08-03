@@ -1,0 +1,51 @@
+.about-us-page{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    color: whitesmoke;
+    margin: auto;
+    background-color: #101010;
+    padding-bottom: 50px;
+    cursor:context-menu;
+}
+
+.about-us-span{
+    font-size: 3.6em;
+    font-style: italic;
+    color: rgb(255, 226, 152);
+    padding: 25px 0px 0px 0px;
+}
+
+.about-us-heading{
+    font-family: "Cormorant", serif;
+    font-size: 3.6em;
+}
+
+.about-us-sub-heading{
+    font-size: 2em;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.about-us-p{
+    width: 62vw;
+    padding: 0px 0px 20px 0px;
+    font-style: italic;
+}
+
+.about-us-p:last-child{
+    width: 50vw;
+}
+
+@media (max-width:550px) {
+    .about-us-p{
+    width: 90vw;
+}
+.about-us-p:last-child{
+    width: 90vw;
+}
+}

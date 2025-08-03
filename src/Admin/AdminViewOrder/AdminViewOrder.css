@@ -1,0 +1,85 @@
+.admin-orders-page {
+  padding: 20px;
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  color: #f0f0f0;
+}
+
+.admin-order-tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.admin-order-tabs button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #2a2a2a;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.admin-order-tabs .active-tab,
+.admin-order-tabs button:hover {
+  background-color: orangered;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.order-card {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.order-items {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.order-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.no-orders {
+  text-align: center;
+  color: #999;
+}
+
+.update-but{
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  margin: 10px 0px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  cursor: pointer;
+  background-color: rgb(142, 255, 49);
+}
+
+@media (max-width:550px) {
+  .update-but{
+    padding: 10px 10px
+  }
+}

@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.admin-page {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.admin-form {
+  background-color: #2a2a2a;
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.admin-input {
+  padding: 0.75rem;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.admin-input:focus {
+  border-color: rgb(255, 243, 239);
+}
+
+.admin-button {
+  padding: 0.75rem;
+  background-color: orangered;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-button:hover {
+  background-color: #ff4c1a;
+}
+
+.admin-page h2{
+    padding: 20px 0px 40px 0px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.admin-page a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 20px;
+    opacity: 0.7;
+    font-size: 0.8em;
+    transition: all 0.3s ease-in;
+}
+
+.admin-page a:hover{
+    opacity: 1;
+}

@@ -1,0 +1,115 @@
+.card-container {
+  height: 420px;
+  width: 260px;
+  overflow: hidden;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  color: #f0f0f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.card-container:hover {
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.1);
+}
+
+.card-img-con {
+  height: 58%;
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-img-con img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.card-container:hover .card-img-con img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 12px 15px 0;
+  flex-grow: 1;
+}
+
+.card-name {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.card-description {
+  font-size: 0.95em;
+  color: #bbbbbb;
+  line-height: 1.4;
+  height: 38px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-price-con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px 15px;
+  font-size: 1em;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+.card-price-con button {
+  padding: 10px 16px;
+  outline: none;
+  border: none;
+  background-color: #ff5722;
+  color: white;
+  font-weight: bold;
+  font-size: 0.95em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-price-con button:hover {
+  background-color: #ff7043;
+  transform: scale(1.05);
+}
+
+.card-price-con .remove-btn {
+  background-color: #e53935;
+}
+
+.card-price-con .remove-btn:hover {
+  background-color: #d32f2f;
+}
+
+.card-inc-dec-but{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-inc-dec-but button:hover{
+  transform: scale(1);
+}
+
+@media (max-width:500px) {
+  .card-container{
+    width: 45vw;
+    height: 350px;
+    font-size: 0.9em;
+  }
+  .card-description{
+    display: none;
+  }
+}

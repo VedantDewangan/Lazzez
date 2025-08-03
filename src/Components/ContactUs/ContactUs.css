@@ -1,0 +1,129 @@
+.contact-page {
+  background-image: url("../../Assets/contact.jpg");
+  height: 85vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.contact-logo {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  scale: 0.7;
+}
+
+.contact-page-heading {
+  text-align: center;
+  width: 70vw;
+  padding: 5px;
+  font-style: italic;
+  font-family: "Cormorant", serif;
+  display: block;
+  margin: auto;
+  color: white;
+  font-size: 2.6em;
+}
+
+.contact-page-subheading {
+  text-align: center;
+  width: 50vw;
+  margin: auto;
+  display: block;
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.contact-page form {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+  margin: auto;
+}
+
+.contact-page form div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.contact-page select,
+.contact-page input[type="date"],
+.contact-page input[type="text"] {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.contact-page form option {
+  background-color: black;
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+
+.contact-page input[type="text"] {
+  max-width: 100%;
+}
+
+.contact-page select:hover,
+.contact-page input[type="date"]:hover,
+.contact-page input[type="text"]:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.contact-page button {
+  padding: 14px 20px;
+  border: none;
+  background-color: #ff5e57;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-page button:hover {
+  background-color: #ff2e2e;
+}
+
+@media (max-width:550px) {
+  .contact-page {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .contact-page-heading {
+    font-size: 2rem;
+    width: 100vw;
+  }
+
+  .contact-page-subheading {
+    width: 95vw;
+    padding: 30px 0px;
+    text-align: center;
+  }
+
+  .contact-page form {
+    width: 95vw;
+    flex-direction: column;
+  }
+}

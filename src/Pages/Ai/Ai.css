@@ -1,0 +1,70 @@
+.ai-page {
+  background-color: #1e1e1e;
+  min-height: 100vh;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.ai-container {
+  padding: 100px 40px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ai-form {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.ai-form select,
+.ai-form button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2c2c2c;
+  color: #fff;
+  font-size: 16px;
+}
+
+.ai-form button {
+  background-color: #ff4500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ai-form button:hover {
+  background-color: #e03e00;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #ff4500;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.ai-loading {
+  color: #ffcc70;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .ai-container {
+    padding: 10px;
+  }
+  .card-grid {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

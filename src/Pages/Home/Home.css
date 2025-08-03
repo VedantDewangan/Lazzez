@@ -1,0 +1,27 @@
+*{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.up-button{
+    position: fixed;
+    bottom: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    font-size: 1.6em;
+    right: 10px;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    opacity: 0.8;
+    transition: all 0.3s ease-in;
+}
+
+.up-button:hover{
+    background-color: white;
+    color: black;
+    opacity: 1;
+}

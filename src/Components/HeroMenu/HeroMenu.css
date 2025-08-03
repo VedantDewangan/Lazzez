@@ -1,0 +1,41 @@
+.bestseller-section {
+    padding: 40px;
+    background-color: #1a1a1a;
+    color: whitesmoke;
+}
+
+.bestseller-section-heading {
+    text-align: center;
+    font-family: "Cormorant", serif;
+    font-size: 2.6em;
+    font-weight: 500;
+}
+
+.line {
+    width: 50vw;
+    display: block;
+    height: 2px;
+    margin: 14px auto;
+    background-color: gray;
+    opacity: 0.2;
+}
+
+.all-card-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 35px;
+}
+
+@media (max-width:500px) {
+    .bestseller-section{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .all-card-con{
+        width: 100vw;
+        gap: 15px;
+    }
+}
