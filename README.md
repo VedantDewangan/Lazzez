@@ -21,6 +21,7 @@
 - **Authentication:** Firebase Auth (Google Sign-In)
 - **Database:** Firebase Firestore
 - **Hosting:** Netlify
+- **Payment:** RazorPay
 
 ---
 
@@ -47,6 +48,7 @@ VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
 VITE_FIREBASE_APP_ID=your_firebase_app_id
 
 VITE_GEMINI_API_KEY=your_gemini_api_key
+VITE_RAZORPAY_API_KEY=your_razorpay_api_key
 ```
 
 
