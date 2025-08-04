@@ -30,7 +30,7 @@ export default function RazorPay({ grandTotal, cart, cartId }) {
       userLandmark: landmark,
     };
     var options = {
-      key: "rzp_test_ZIIbSfegRnSEtJ",
+      key: import.meta.env.VITE_RAZORPAY_API_KEY,
       amount: parseInt(grandTotal * 100),
       currency: "INR",
       name: "E-Bharat",
