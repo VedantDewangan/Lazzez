@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllFood } from "../../Firebase/firebaseAdminFunction";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI } from "@google/genai"; // ✅ Updated SDK
 import Navbar from "../../Components/Navbar/Navbar";
 import Card from "../../Components/Card/Card";
 import "./Ai.css";
@@ -13,8 +13,7 @@ export default function Ai() {
   const [numberOfPeople, setNumberOfPeople] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMENI_API_KEY);
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMENI_API_KEY }); // updated SDK
 
   useEffect(() => {
     const getFood = async () => {
@@ -52,21 +51,32 @@ ${JSON.stringify(food, null, 2)}
 
     try {
       setLoading(true);
-      const result = await model.generateContent(prompt);
-      let responseText = await result.response.text();
 
+      // ✅ Updated API call
+      const result = await ai.models.generateContent({
+        model: "gemini-2.0-flash",
+        contents: prompt,
+      });
+
+      console.log("Full AI response:", result);
+
+      let responseText =
+        result?.candidates?.[0]?.content?.parts?.[0]?.text || "";
+
+      // ✅ Strip triple backticks and optional 'json' tag
       responseText = responseText.trim();
-      if (
-        responseText.startsWith("```json") ||
-        responseText.startsWith("```")
-      ) {
-        responseText = responseText.replace(/```json|```/g, "").trim();
+      if (responseText.startsWith("```")) {
+        responseText = responseText
+          .replace(/^```(?:json)?/, "")
+          .replace(/```$/, "")
+          .trim();
       }
 
       const parsed = JSON.parse(responseText);
       setRecommendedFood(parsed);
     } catch (error) {
       console.error("Failed to get or parse AI response:", error);
+      toast.error("Failed to get AI recommendations.");
     } finally {
       setLoading(false);
     }
